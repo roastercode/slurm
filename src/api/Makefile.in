@@ -204,7 +204,7 @@ libslurm_pmi_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_CFLAGS) $(CFLAGS) $(libslurm_pmi_la_LDFLAGS) $(LDFLAGS) \
 	-o $@
 libslurmfull_la_DEPENDENCIES = $(convenience_libs)
-am_libslurmfull_la_OBJECTS =
+am_libslurmfull_la_OBJECTS = slurm_stubs.lo
 libslurmfull_la_OBJECTS = $(am_libslurmfull_la_OBJECTS)
 libslurmfull_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
@@ -736,7 +736,7 @@ libslurm_la_LDFLAGS = \
         -version-info $(current):$(rev):$(age) \
         $(OTHER_FLAGS)
 
-libslurmfull_la_SOURCES = 
+libslurmfull_la_SOURCES = slurm_stubs.c
 libslurmfull_la_LIBADD = $(convenience_libs)
 libslurmfull_la_LDFLAGS = \
         $(LIB_LDFLAGS) \
