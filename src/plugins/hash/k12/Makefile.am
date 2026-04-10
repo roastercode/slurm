@@ -27,7 +27,7 @@ hash_k12_la_SOURCES =			\
 	Phases.h			\
 	SnP-Relaned.h
 
-hash_k12_la_LDFLAGS = $(PLUGIN_FLAGS)
+hash_k12_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 
 force:
 $(hash_k12_la_LIBADD) : force

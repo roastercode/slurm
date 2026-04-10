@@ -10,7 +10,7 @@ pkglib_LTLIBRARIES = topology_default.la
 
 # Null topology plugin.
 topology_default_la_SOURCES = topology_default.c
-topology_default_la_LDFLAGS = $(PLUGIN_FLAGS)
+topology_default_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 topology_default_la_LIBADD = ../common/libtopology_common.la
 
 force:

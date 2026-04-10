@@ -9,4 +9,4 @@ AM_CPPFLAGS = -DSLURM_PLUGIN_DEBUG -I$(top_srcdir) -I$(top_srcdir)/src/common $(
 pkglib_LTLIBRARIES = proctrack_cray_aries.la
 
 proctrack_cray_aries_la_SOURCES = proctrack_cray_aries.c
-proctrack_cray_aries_la_LDFLAGS = $(PLUGIN_FLAGS) $(CRAY_JOB_LDFLAGS)
+proctrack_cray_aries_la_LDFLAGS = $(PLUGIN_FLAGS) $(CRAY_JOB_LDFLAGS) -Wl,--allow-shlib-undefined

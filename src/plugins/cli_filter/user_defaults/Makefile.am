@@ -10,5 +10,5 @@ pkglib_LTLIBRARIES = cli_filter_user_defaults.la
 
 # Job submit defaults plugin.
 cli_filter_user_defaults_la_SOURCES = cli_filter_user_defaults.c
-cli_filter_user_defaults_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS)
+cli_filter_user_defaults_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 cli_filter_user_defaults_la_LIBADD = ../common/libcli_filter_common.la

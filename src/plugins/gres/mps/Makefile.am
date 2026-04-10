@@ -10,7 +10,7 @@ pkglib_LTLIBRARIES = gres_mps.la
 
 # Gres MPS plugin.
 gres_mps_la_SOURCES = gres_mps.c
-gres_mps_la_LDFLAGS = $(PLUGIN_FLAGS)
+gres_mps_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 gres_mps_la_LIBADD = ../common/libgres_common.la
 
 force:

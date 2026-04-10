@@ -11,4 +11,4 @@ pkglib_LTLIBRARIES = job_container_tmpfs.la
 # job_container/none plugin.
 job_container_tmpfs_la_SOURCES = job_container_tmpfs.c read_jcconf.c \
 				 read_jcconf.h
-job_container_tmpfs_la_LDFLAGS = $(PLUGIN_FLAGS)
+job_container_tmpfs_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined

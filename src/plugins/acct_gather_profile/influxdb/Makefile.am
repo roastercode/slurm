@@ -9,5 +9,5 @@ AM_CPPFLAGS = -DSLURM_PLUGIN_DEBUG -I$(top_srcdir) -I$(top_srcdir)/src/common $(
 pkglib_LTLIBRARIES = acct_gather_profile_influxdb.la
 
 acct_gather_profile_influxdb_la_SOURCES = acct_gather_profile_influxdb.c
-acct_gather_profile_influxdb_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS)
+acct_gather_profile_influxdb_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 acct_gather_profile_influxdb_la_LIBADD = $(LIBCURL)

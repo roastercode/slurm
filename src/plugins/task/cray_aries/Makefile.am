@@ -10,5 +10,5 @@ pkglib_LTLIBRARIES = task_cray_aries.la
 
 # Null task plugin.
 task_cray_aries_la_SOURCES = task_cray_aries.c
-task_cray_aries_la_LDFLAGS = $(PLUGIN_FLAGS) $(CRAY_TASK_LDFLAGS) \
+task_cray_aries_la_LDFLAGS = $(PLUGIN_FLAGS) $(CRAY_TASK_LDFLAGS) \ -Wl,--allow-shlib-undefined
 	$(NUMA_LIBS)

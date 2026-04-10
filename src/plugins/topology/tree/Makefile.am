@@ -10,7 +10,7 @@ pkglib_LTLIBRARIES = topology_tree.la
 
 # tree topology plugin.
 topology_tree_la_SOURCES = topology_tree.c
-topology_tree_la_LDFLAGS = $(PLUGIN_FLAGS)
+topology_tree_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 topology_tree_la_LIBADD = ../common/libtopology_common.la
 
 force:

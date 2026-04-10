@@ -10,5 +10,5 @@ pkglib_LTLIBRARIES = cli_filter_syslog.la
 
 # Job submit defaults plugin.
 cli_filter_syslog_la_SOURCES = cli_filter_syslog.c
-cli_filter_syslog_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS)
+cli_filter_syslog_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 cli_filter_syslog_la_LIBADD = ../common/libcli_filter_common.la

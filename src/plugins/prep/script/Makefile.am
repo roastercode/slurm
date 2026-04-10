@@ -15,4 +15,4 @@ prep_script_la_SOURCES =		\
 	prep_script_slurmctld.c		\
 	prep_script_slurmd.c
 
-prep_script_la_LDFLAGS = $(PLUGIN_FLAGS)
+prep_script_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined

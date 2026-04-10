@@ -8,5 +8,5 @@ PLUGIN_FLAGS = -module -avoid-version --export-dynamic
 
 pkglib_LTLIBRARIES = job_submit_cray_aries.la
 job_submit_cray_aries_la_SOURCES = job_submit_cray_aries.c
-job_submit_cray_aries_la_LDFLAGS = $(PLUGIN_FLAGS)
+job_submit_cray_aries_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 

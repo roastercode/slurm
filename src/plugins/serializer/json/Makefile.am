@@ -12,7 +12,7 @@ pkglib_LTLIBRARIES = serializer_json.la
 
 # Serializer JSON plugin.
 serializer_json_la_SOURCES = serializer_json.c
-serializer_json_la_LDFLAGS = $(PLUGIN_FLAGS)
+serializer_json_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 serializer_json_la_LIBADD = $(JSON_LDFLAGS)
 
 force:

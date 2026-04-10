@@ -16,5 +16,5 @@ cgroup_v2_la_SOURCES =	\
 	cgroup_dbus.c	\
 	cgroup_dbus.h
 
-cgroup_v2_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS)
+cgroup_v2_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 cgroup_v2_la_LIBADD = ../common/libcgroup_common.la $(dbus_LIBS)

@@ -12,7 +12,7 @@ if HAVE_LUA
 # Burst buffer lua plugin.
 pkglib_LTLIBRARIES = burst_buffer_lua.la
 burst_buffer_lua_la_SOURCES = burst_buffer_lua.c
-burst_buffer_lua_la_LDFLAGS = $(PLUGIN_FLAGS)
+burst_buffer_lua_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 burst_buffer_lua_la_LIBADD = ../common/libburst_buffer_common.la \
 			     $(top_builddir)/src/lua/libslurm_lua.la \
 			     $(lua_lIBS)

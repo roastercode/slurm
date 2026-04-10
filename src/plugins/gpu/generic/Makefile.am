@@ -10,7 +10,7 @@ pkglib_LTLIBRARIES = gpu_generic.la
 
 # GPU GENERIC plugin.
 gpu_generic_la_SOURCES = gpu_generic.c
-gpu_generic_la_LDFLAGS = $(PLUGIN_FLAGS)
+gpu_generic_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 
 force:
 $(gpu_generic_la_LIBADD) : force

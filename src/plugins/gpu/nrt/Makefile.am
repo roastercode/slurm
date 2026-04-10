@@ -10,4 +10,4 @@ NRT_SOURCES = gpu_nrt.c
 
 pkglib_LTLIBRARIES = gpu_nrt.la
 gpu_nrt_la_SOURCES = $(NRT_SOURCES)
-gpu_nrt_la_LDFLAGS = $(PLUGIN_FLAGS)
+gpu_nrt_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined

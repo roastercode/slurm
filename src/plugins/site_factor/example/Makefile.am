@@ -10,7 +10,7 @@ pkglib_LTLIBRARIES = site_factor_example.la
 
 # site_factor NONE plugin.
 site_factor_example_la_SOURCES = site_factor_example.c
-site_factor_example_la_LDFLAGS = $(PLUGIN_FLAGS)
+site_factor_example_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 
 force:
 $(site_factor_example_la_LIBADD) : force

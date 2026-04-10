@@ -12,7 +12,7 @@ pkglib_LTLIBRARIES = serializer_yaml.la
 
 # Serializer yaml plugin.
 serializer_yaml_la_SOURCES = serializer_yaml.c
-serializer_yaml_la_LDFLAGS = $(PLUGIN_FLAGS)
+serializer_yaml_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 serializer_yaml_la_LIBADD = $(YAML_LDFLAGS)
 
 force:

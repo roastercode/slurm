@@ -13,4 +13,4 @@ task_affinity_la_SOURCES = 	\
 	numa.c \
 	schedutils.c \
 	task_affinity.c
-task_affinity_la_LDFLAGS = $(NUMA_LIBS) $(PLUGIN_FLAGS)
+task_affinity_la_LDFLAGS = $(NUMA_LIBS) $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined

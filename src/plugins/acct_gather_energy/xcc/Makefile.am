@@ -18,7 +18,7 @@ acct_gather_energy_xcc_la_SOURCES = acct_gather_energy_xcc.c
 
 #acct_gather_energy_xcc_la_CFLAGS = $(MYSQL_CFLAGS)
 
-acct_gather_energy_xcc_la_LDFLAGS = $(PLUGIN_FLAGS) $(FREEIPMI_LDFLAGS)
+acct_gather_energy_xcc_la_LDFLAGS = $(PLUGIN_FLAGS) $(FREEIPMI_LDFLAGS) -Wl,--allow-shlib-undefined
 acct_gather_energy_xcc_la_LIBADD = $(FREEIPMI_LIBS)
 
 else

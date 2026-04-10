@@ -19,7 +19,7 @@ auth_slurm_la_SOURCES = \
 	sack.c \
 	sbcast.c \
 	util.c
-auth_slurm_la_LDFLAGS = $(PLUGIN_FLAGS) $(JWT_LDFLAGS)
+auth_slurm_la_LDFLAGS = $(PLUGIN_FLAGS) $(JWT_LDFLAGS) -Wl,--allow-shlib-undefined
 auth_slurm_la_LIBADD = $(top_builddir)/src/plugins/cred/common/libcred_common.la $(JWT_LIBS)
 
 force:

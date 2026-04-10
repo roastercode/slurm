@@ -20,4 +20,4 @@ select_cons_tres_la_SOURCES = \
 	node_data.c node_data.h \
 	part_data.c part_data.h \
 	select_cons_tres.c select_cons_tres.h
-select_cons_tres_la_LDFLAGS = $(PLUGIN_FLAGS)
+select_cons_tres_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined

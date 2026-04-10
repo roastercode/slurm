@@ -23,7 +23,7 @@ switch_hpe_slingshot_la_SOURCES = \
 	setup_nic.c \
 	switch_hpe_slingshot.c \
 	switch_hpe_slingshot.h
-switch_hpe_slingshot_la_LDFLAGS = $(PLUGIN_FLAGS)
+switch_hpe_slingshot_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 switch_hpe_slingshot_la_LIBADD = $(LIBCURL) $(JSON_LDFLAGS)
 
 endif

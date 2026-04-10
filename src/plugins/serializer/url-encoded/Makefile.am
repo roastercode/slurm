@@ -10,7 +10,7 @@ pkglib_LTLIBRARIES = serializer_url_encoded.la
 
 # Serializer URL encoded plugin.
 serializer_url_encoded_la_SOURCES = serializer_url_encoded.c
-serializer_url_encoded_la_LDFLAGS = $(PLUGIN_FLAGS)
+serializer_url_encoded_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 
 force:
 $(serializer_url_encoded_la_LIBADD) : force

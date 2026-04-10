@@ -11,4 +11,4 @@ pkglib_LTLIBRARIES = acct_gather_energy_rapl.la
 # cpu/core energy accounting plugin.
 acct_gather_energy_rapl_la_SOURCES = acct_gather_energy_rapl.c
 
-acct_gather_energy_rapl_la_LDFLAGS = $(PLUGIN_FLAGS)
+acct_gather_energy_rapl_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined

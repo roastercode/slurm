@@ -11,4 +11,4 @@ pkglib_LTLIBRARIES = core_spec_cray_aries.la
 # Cray/Aries core specialization plugin.
 core_spec_cray_aries_la_SOURCES = core_spec_cray_aries.c
 core_spec_cray_aries_la_CPPFLAGS = $(CRAY_JOB_CPPFLAGS) $(AM_CPPFLAGS)
-core_spec_cray_aries_la_LDFLAGS = $(CRAY_JOB_LDFLAGS) $(PLUGIN_FLAGS)
+core_spec_cray_aries_la_LDFLAGS = $(CRAY_JOB_LDFLAGS) $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined

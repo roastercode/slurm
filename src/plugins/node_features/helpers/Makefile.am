@@ -8,7 +8,7 @@ AM_CPPFLAGS = -DSLURM_PLUGIN_DEBUG -I$(top_srcdir) -I$(top_srcdir)/src/common
 
 pkglib_LTLIBRARIES = node_features_helpers.la
 node_features_helpers_la_SOURCES = node_features_helpers.c
-node_features_helpers_la_LDFLAGS = $(PLUGIN_FLAGS)
+node_features_helpers_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 
 force:
 $(node_features_helpers_la_LIBADD) : force

@@ -18,7 +18,7 @@ data_parser_v0_0_40_la_SOURCES = \
 	parsing.h parsing.c \
 	parsers.h parsers.c
 data_parser_v0_0_40_la_DEPENDENCIES =
-data_parser_v0_0_40_la_LDFLAGS = $(PLUGIN_FLAGS)
+data_parser_v0_0_40_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 data_parser_v0_0_40_la_LIBADD =
 data_parser_v0_0_40_la_CFLAGS = -DDATA_VERSION=v0.0.40 -DPLUGIN_ID=12002
 

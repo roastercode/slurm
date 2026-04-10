@@ -20,4 +20,4 @@ mpi_pmi2_la_SOURCES = mpi_pmi2.c \
 	nameserv.c nameserv.h \
 	ring.c ring.h
 
-mpi_pmi2_la_LDFLAGS = $(PLUGIN_FLAGS)
+mpi_pmi2_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined

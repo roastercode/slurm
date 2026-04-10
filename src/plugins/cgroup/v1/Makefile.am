@@ -10,5 +10,5 @@ pkglib_LTLIBRARIES = cgroup_v1.la
 
 # Cgroup v1 plugin.
 cgroup_v1_la_SOURCES =	cgroup_v1.c cgroup_v1.h xcgroup.c xcgroup.h
-cgroup_v1_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS)
+cgroup_v1_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 cgroup_v1_la_LIBADD = ../common/libcgroup_common.la

@@ -11,7 +11,7 @@ if HAVE_LUA
 # Job submit lua plugin.
 pkglib_LTLIBRARIES = job_submit_lua.la
 job_submit_lua_la_SOURCES = job_submit_lua.c
-job_submit_lua_la_LDFLAGS = $(PLUGIN_FLAGS)
+job_submit_lua_la_LDFLAGS = $(PLUGIN_FLAGS) -Wl,--allow-shlib-undefined
 job_submit_lua_la_LIBADD  = $(top_builddir)/src/lua/libslurm_lua.la \
 			    $(lua_LIBS)
 
