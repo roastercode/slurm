@@ -123,7 +123,7 @@ extern int plugin_peek(const char *fq_path, char *plugin_type,
 	plugin_handle_t plug;
 
 	(void) dlerror();
-	if (!(plug = dlopen(fq_path, RTLD_LAZY))) {
+	if (!(plug = dlopen(fq_path, RTLD_LAZY | RTLD_GLOBAL))) {
 		debug3("%s: dlopen(%s): %s", __func__, fq_path, dlerror());
 		return ESLURM_PLUGIN_DLOPEN_FAILED;
 	}
@@ -152,7 +152,7 @@ extern int plugin_load_from_file(plugin_handle_t *p, const char *fq_path)
 	 *
 	 */
 	(void) dlerror();
-	plug = dlopen(fq_path, RTLD_LAZY);
+	plug = dlopen(fq_path, RTLD_LAZY | RTLD_GLOBAL);
 	if (plug == NULL) {
 		error("plugin_load_from_file: dlopen(%s): %s",
 		      fq_path, dlerror());
